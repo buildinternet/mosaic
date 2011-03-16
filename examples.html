@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<!--
+		Mosaic - Sliding Boxes and Captions jQuery Plugin
+		Version 1.0
+		www.buildinternet.com/project/mosaic
+		
+		By Sam Dunn / One Mighty Roar (www.onemightyroar.com)
+		Released under MIT License / GPL License
+	-->
+
+	<head>
+
+		<title>Mosaic - Sliding Boxes and Captions jQuery Plugin</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		
+		<link rel="stylesheet" href="css/mosaic.css" type="text/css" media="screen" />
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/mosaic.1.0.js"></script>
+		
+		<script type="text/javascript">  
+			
+			jQuery(function($){
+				
+				$('.circle').mosaic({
+				
+					opacity		:	0.8			//Opacity for overlay (0-1)
+				});
+				
+				$('.fade').mosaic();
+				
+				$('.bar').mosaic({
+					animation	:	'slide'		//fade or slide
+				});
+				
+				$('.bar2').mosaic({
+					animation	:	'slide'		//fade or slide
+				});
+				
+				$('.bar3').mosaic({
+					animation	:	'slide',	//fade or slide
+					anchor_y	:	'top'		//Vertical anchor position
+				});
+				
+				$('.cover').mosaic({
+					animation	:	'slide',	//fade or slide
+					hover_x		:	'400px'		//Horizontal position on hover
+				});
+				
+				$('.cover2').mosaic({
+					animation	:	'slide',	//fade or slide
+					anchor_y	:	'top',		//Vertical anchor position
+					hover_y		:	'80px'		//Vertical position on hover
+				});
+				
+				$('.cover3').mosaic({
+					animation	:	'slide',	//fade or slide
+					hover_x		:	'400px',	//Horizontal position on hover
+					hover_y		:	'300px'		//Vertical position on hover
+				});
+		    
+		    });
+		    
+		</script>
+		
+		<style type="text/css">
+		
+			/*Demo Styles*/
+			body{ background:#e9e8e4 url('img/bg-grid.png');; }
+				#content{ width:845px; margin:20px auto; padding:10px 30px; }
+				.clearfix{ display: block; height: 0; clear: both; visibility: hidden; }
+						
+				.details{ margin:15px 20px; }	
+					h4{ font:300 16px 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height:160%; letter-spacing:0.15em; color:#fff; text-shadow:1px 1px 0 rgb(0,0,0); }
+					p{ font:300 12px 'Lucida Grande', Tahoma, Verdana, sans-serif; color:#aaa; text-shadow:1px 1px 0 rgb(0,0,0);}
+					a{ text-decoration:none; }
+		
+		</style>
+		
+	</head>
+
+<body>
+
+	<div id="content">
+		
+		<!--Circle-->	
+		<div class="mosaic-block circle">
+			<a href="http://buildinternet.com/project/mosaic" class="mosaic-overlay">&nbsp;</a>
+			<div class="mosaic-backdrop"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/mosaic.jpg"/></div>
+		</div>
+	
+		<!--Fade-->
+		<div class="mosaic-block fade">
+			<a href="http://buildinternet.com/project/mightyicons/" target="_blank" class="mosaic-overlay">
+				<div class="details">
+					<h4>Mighty Social Icons</h4>
+					<p>By Build Internet</p>
+				</div>
+			</a>
+			<div class="mosaic-backdrop"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/mightyicons.jpg"/></div>
+		</div>
+		
+		<!--Bar-->
+		<div class="mosaic-block bar">
+			<a href="http://www.nonsensesociety.com/2011/01/sloppy-art/" target="_blank" class="mosaic-overlay">
+				<div class="details">
+					<h4>Sloppy Art - A Mess of Inspiration</h4>
+					<p>via the Nonsense Society (image credit: Florian</p>
+				</div>
+			</a>
+			<div class="mosaic-backdrop"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/florian.jpg"/></div>
+		</div>
+		
+		<!--Bar 2-->
+		<div class="mosaic-block bar2">
+			<a href="http://www.nonsensesociety.com/2010/12/i-am-not-human-portraits/" target="_blank" class="mosaic-overlay">
+				<div class="details">
+					<h4>I Am Not Human - Unique Self Portraits</h4><br/>
+					<p>via the Nonsense Society (photo credit: Dan Deroches)</p>
+				</div>
+			</a>
+			<div class="mosaic-backdrop"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/desroches.jpg"/></div>
+		</div>
+		
+		<!--Bar 3-->
+		<div class="mosaic-block bar3">
+			<a href="http://www.desktopped.com/featured/2010/09/multi-display-setup-with-four-systems-and-a-whole-lot-of-screen-space/" target="_blank" class="mosaic-overlay">
+				<div class="details">
+					<h4>Multi-Display Setup With Four Systems, A Wall of Screens, And 64TB Of Storage</h4>
+					<p>via Desktopped</p>
+				</div>
+			</a>
+			<a href="http://www.nonsensesociety.com/2010/12/i-am-not-human-portraits/" target="_blank" class="mosaic-backdrop"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/64tb.jpg"/></a>
+		</div>
+		
+		<!--Cover-->
+		<div class="mosaic-block cover">
+			<div class="mosaic-overlay"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/imac.jpg"/></div>
+			<a href="http://www.desktopped.com/featured/2010/12/mounted-imac-and-desk-mod-with-computer-components-built-in/" target="_blank" class="mosaic-backdrop">
+				<div class="details">
+					<h4>Mounted iMac And Desk Mod With Computer Components Built In</h4>
+					<p>via Desktopped</p>
+				</div>
+			</a>
+		</div>
+		
+		<!--Cover 2-->
+		<div class="mosaic-block cover2">
+			<a href="http://yourather.com/questions/135" target="_blank" class="mosaic-overlay"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/yourather.jpg"/></a>
+			<a href="http://yourather.com/questions/135" target="_blank" class="mosaic-backdrop">
+				<div class="details">
+					<h4>Hardest Choice Ever</h4>
+					<p>via You Rather</p>
+				</div>
+			</a>
+		</div>
+			
+		<!--Cover 3-->
+		<div class="mosaic-block cover3">
+			<div class="mosaic-overlay"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/omr-office.jpg"/></div>
+			<a href="http://officeal.com/offices/one-mighty-roar/" target="_blank" class="mosaic-backdrop">
+				<div class="details">
+					<h4>One Mighty Roar Office</h4>
+					<p>via Officeal</p>
+				</div>
+			</a>
+		</div>
+		
+		<div class="clearfix"></div>
+	</div>
+	
+</body>
+</html>

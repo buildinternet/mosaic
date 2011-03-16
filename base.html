@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<!--
+		Mosaic - Sliding Boxes and Captions jQuery Plugin
+		Version 1.0
+		www.buildinternet.com/project/mosaic
+		
+		By Sam Dunn / One Mighty Roar (www.onemightyroar.com)
+		Released under MIT License / GPL License
+	-->
+
+	<head>
+
+		<title>Mosaic - Sliding Boxes and Captions jQuery Plugin</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		
+		<link rel="stylesheet" href="css/mosaic.css" type="text/css" media="screen" />
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/mosaic.1.0.js"></script>
+		
+		<script type="text/javascript">  
+			
+			jQuery(function($){
+			
+				$('.bar').mosaic({
+					animation	:	'slide'
+				});
+		    
+		    });
+		    
+		</script>
+		
+		<style type="text/css">
+		
+			/*Demo Styles*/
+			body{ background:#e9e8e4 url('img/bg-grid.png');; }
+				.mosaic-block{ left:50%; top:50%; margin-left:-200px; margin-top:-125px; position:absolute; }
+				.clearfix{ display: block; height: 0; clear: both; visibility: hidden; }
+						
+				.details{ margin:15px 20px; }	
+					h4{ font:300 16px 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height:160%; letter-spacing:0.15em; color:#fff; text-shadow:1px 1px 0 rgb(0,0,0); }
+					p{ font:300 12px 'Lucida Grande', Tahoma, Verdana, sans-serif; color:#aaa; text-shadow:1px 1px 0 rgb(0,0,0);}
+					a{ text-decoration:none; }
+		
+		</style>
+		
+	</head>
+
+<body>
+
+	<div id="content">
+
+		<!--Bar-->
+		<div class="mosaic-block bar">
+			<a href="http://buildinternet.com/project/mosaic" target="_blank" class="mosaic-overlay">
+				<div class="details">
+					<h4>Mosaic - Sliding Boxes and Captions jQuery Plugin</h4>
+					<p>by Build Internet</p>
+				</div>
+			</a>
+			<div class="mosaic-backdrop"><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/mosaic.jpg"/></div>
+		</div>
+		
+		<div class="clearfix"></div>
+	</div>
+	
+</body>
+</html>
