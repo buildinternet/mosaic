@@ -4,6 +4,11 @@ Documentation can be found on the official project page: [http://www.buildintern
 
 *** Changelog ***
 
+3/17/11 - 1.0.1 Fix
+
+	*Fixed bug with multiple boxes being triggered at the same time.
+	*Added options to define overlay and backdrop elements
+
 3/16/11 - Mosaic 1.0 Released
 
 	*Automatically generate sliding boxes & captions
