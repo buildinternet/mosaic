@@ -55,9 +55,6 @@
 		}
 		
 		.fade .mosaic-overlay {
-			opacity:0;
-			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
-			filter:alpha(opacity=00);
 			background:url(../img/bg-black.png);
 		}
 		
