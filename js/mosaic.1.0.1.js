@@ -49,7 +49,10 @@
 				});
 			}else{
 				$(base.options.backdrop, base.el).show();
-				$(base.options.overlay , base.el).show();
+				if(base.options.animation == 'fade')
+					$(base.options.overlay , base.el).fadeTo(0, 0).show();
+				else
+					$(base.options.overlay , base.el).show();
 				base.allow_hover();
 			}
         };
