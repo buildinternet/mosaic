@@ -84,9 +84,9 @@
 			      	endState[base.options.anchor_y] = startY;
 			      	
 					$(base.el).hover(function () {
-			        	$(base.options.overlay, base.el).stop().animate(hoverState, base.options.speed);
+			        	$(base.options.overlay, base.el).stop().animate(hoverState, base.options.speed, base.options.easeIn);
 			        },function () {
-			        	$(base.options.overlay, base.el).stop().animate(endState, base.options.speed);
+			        	$(base.options.overlay, base.el).stop().animate(endState, base.options.speed, base.options.easeOut);
 			      	});
 			      	
 			      	break;
@@ -101,6 +101,8 @@
         animation	: 'fade',
         speed		: 150,
         opacity		: 1,
+        easeIn      : 'swing',
+        easeOut     : 'swing',
         preload		: 0,
         anchor_x	: 'left',
         anchor_y	: 'bottom',
