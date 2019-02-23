@@ -10,8 +10,8 @@
 (function($){
 
     if(!$.omr){
-        $.omr = new Object();
-    };
+        $.omr = {};
+    }
     
     $.omr.mosaic = function(el, options){
     
@@ -39,8 +39,8 @@
 			
 				$(window).load(function(){
 					// IE transparency fade fix
-					if(base.options.options.animation == 'fade' && $(base.options.overlay, base.el).css('opacity') == 0 ) $(base.options.overlay, base.el).css('filter', 'alpha(opacity=0)');
-					
+					if(base.options.options.animation === 'fade' && $(base.options.overlay, base.el).css('opacity') === 0 ) $(base.options.overlay, base.el).css('filter', 'alpha(opacity=0)');
+
 					$(base.options.overlay, base.el).fadeIn(200, function(){
 						$(base.options.backdrop, base.el).fadeIn(200);
 					});
@@ -72,8 +72,8 @@
 			    // Handle slide animations
 	      		case 'slide':
 	      			// Grab default overlay x,y position
-					startX = $(base.options.overlay, base.el).css(base.options.anchor_x) != 'auto' ? $(base.options.overlay, base.el).css(base.options.anchor_x) : '0px';
-					startY = $(base.options.overlay, base.el).css(base.options.anchor_y) != 'auto' ? $(base.options.overlay, base.el).css(base.options.anchor_y) : '0px';;
+					var startX = $(base.options.overlay, base.el).css(base.options.anchor_x) !== 'auto' ? $(base.options.overlay, base.el).css(base.options.anchor_x) : '0px';
+					var startY = $(base.options.overlay, base.el).css(base.options.anchor_y) !== 'auto' ? $(base.options.overlay, base.el).css(base.options.anchor_y) : '0px';
 	      			
 			      	var hoverState = {};
 			      	hoverState[base.options.anchor_x] = base.options.hover_x;
@@ -90,7 +90,7 @@
 			      	});
 			      	
 			      	break;
-			};
+			}
         };
         
         // Make it go!
